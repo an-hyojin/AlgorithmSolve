@@ -1,5 +1,5 @@
 import java.util.*;
-class Greedy4 {
+class Greedy3 {
     public int solution(String name) {
         HashMap<Character,Integer> alphabets = new HashMap<>();
         for(int i='A';i<='Z';i++){

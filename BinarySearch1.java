@@ -13,7 +13,6 @@ class BinarySearch1 {
     }
     public long binarySearch(BigInteger min, BigInteger max, BigInteger n){
         BigInteger half = min.add(max).divide(BigInteger.valueOf(2));
-        BigInteger realMin = max;
         while(max.compareTo(min)>=0){
             half = min.add(max).divide(BigInteger.valueOf(2));
             BigInteger num =BigInteger.ZERO;
@@ -25,15 +24,12 @@ class BinarySearch1 {
 
                 max = half.subtract(BigInteger.ONE);
 
-                if(realMin.compareTo(half)>0){
-                    realMin = half;
 
-                }
             }else{
                 min = half.add(BigInteger.ONE);
 
             }
         }
-        return realMin.longValue();
+        return min.longValue();
     }
 }
